@@ -15,7 +15,7 @@ let package = Package(
         .visionOS(.v2),
     ],
     products: [
-        // Automatic library type, like StreamenRecorderKit: Xcode links it statically into the app.
+        // Automatic library type, like StreamenDVRKit: Xcode links it statically into the app.
         .library(name: "StreamenCloudKit", targets: ["StreamenCloudKit"]),
     ],
     targets: [

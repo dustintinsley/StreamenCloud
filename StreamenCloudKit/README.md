@@ -9,9 +9,9 @@ third-party dependencies.
 - The wire contract is [`../spec/PROTOCOL.md`](../spec/PROTOCOL.md). The
   known-answer vectors are in [`../spec/vectors/`](../spec/vectors/README.md).
 - Streamen consumes it as a **local package** at `../StreamenCloud/StreamenCloudKit` (product
-  `StreamenCloudKit`, linked statically), like `../StreamenRecorder/Kit`. The folder
+  `StreamenCloudKit`, linked statically), like `../StreamenDVR/Kit`. The folder
   carries the package name on purpose: Xcode names a local package after its
-  folder, so a second `Kit` folder would collide with StreamenRecorder's and one of
+  folder, so a second `Kit` folder would collide with StreamenDVR's and one of
   the two would be dropped silently.
 
 The Kit knows nothing about Streamen's SwiftData models and doesn't run the sync
