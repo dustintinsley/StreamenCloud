@@ -12,8 +12,8 @@ ids.
 ## 1. Conventions
 
 - **Base URL:**
-  - Official: `https://cloud.getlume.org`
-  - Staging: `https://cloud-staging.getlume.org`
+  - Official: `https://cloud.streamen.app`
+  - Staging: `https://cloud-staging.streamen.app`
   - Every path below is prefixed with `/v1` unless noted.
 - **JSON:** UTF-8 with camelCase keys. Unknown response keys MUST be ignored
   by clients, and unknown request keys MUST be ignored by the server.
@@ -298,7 +298,7 @@ The flow:
 
 3. The joined device shows "Add **Living Room** (tvOS)?". After the user
    confirms, it seals the payload
-   `{"accountId":"…","rootKey":"<b64url>","serverURL":"https://cloud.getlume.org"}`
+   `{"accountId":"…","rootKey":"<b64url>","serverURL":"https://cloud.streamen.app"}`
    (keys sorted) to `publicKey`, and sends
    **`POST /v1/pairings/{code}/seal`** (authenticated):
 

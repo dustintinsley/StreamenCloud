@@ -6,7 +6,7 @@
 // verbatim. Nothing is decrypted.
 //
 //   STREAMEN_RECOVERY_KEY='XXXX-XXXX-…' node scripts/migrate-account.mjs \
-//     --from https://cloud-staging.getlume.org --to https://cloud.getlume.org
+//     --from https://cloud-staging.streamen.app --to https://cloud.streamen.app
 //
 // Without STREAMEN_RECOVERY_KEY the key is read from stdin (hidden when it's a TTY).
 // No dependencies; Node 20+.
@@ -18,8 +18,8 @@ import { parseArgs } from "node:util";
 const USAGE = `Usage: node scripts/migrate-account.mjs --from <url> --to <url> [options]
 
 Options:
-  --from <url>       Source server, e.g. https://cloud-staging.getlume.org
-  --to <url>         Destination server, e.g. https://cloud.getlume.org
+  --from <url>       Source server, e.g. https://cloud-staging.streamen.app
+  --to <url>         Destination server, e.g. https://cloud.streamen.app
   --invite <code>    Invite code, if the destination has SIGNUP=invite
   --overwrite        Records that differ on the destination are replaced by the
                      source copy (records only on the destination are kept)

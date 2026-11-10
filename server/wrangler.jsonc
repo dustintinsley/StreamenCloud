@@ -59,7 +59,7 @@
       "name": "streamen-cloud-staging",
       "workers_dev": false,
       "preview_urls": false,
-      "routes": [{ "pattern": "cloud-staging.getlume.org", "custom_domain": true }],
+      "routes": [{ "pattern": "cloud-staging.streamen.app", "custom_domain": true }],
       "exports": {
         "AccountDO": { "type": "durable-object", "storage": "sqlite" },
         "PairingDO": { "type": "durable-object", "storage": "sqlite" },
@@ -96,7 +96,7 @@
       "name": "streamen-cloud",
       "workers_dev": false,
       "preview_urls": false,
-      "routes": [{ "pattern": "cloud.getlume.org", "custom_domain": true }],
+      "routes": [{ "pattern": "cloud.streamen.app", "custom_domain": true }],
       "exports": {
         "AccountDO": { "type": "durable-object", "storage": "sqlite" },
         "PairingDO": { "type": "durable-object", "storage": "sqlite" },

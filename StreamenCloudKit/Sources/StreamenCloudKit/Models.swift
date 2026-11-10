@@ -11,9 +11,9 @@ public enum StreamenCloudAPI {
     /// The protocol version (the path prefix is `/v1`).
     public static let version = 1
     /// The official instance.
-    public static let officialURL = URL(string: "https://cloud.getlume.org")!
+    public static let officialURL = URL(string: "https://cloud.streamen.app")!
     /// The staging instance.
-    public static let stagingURL = URL(string: "https://cloud-staging.getlume.org")!
+    public static let stagingURL = URL(string: "https://cloud-staging.streamen.app")!
     /// Header carrying this device's id on authenticated routes.
     public static let deviceHeader = "X-Streamen-Device"
     /// Largest page `changes(since:limit:)` may request.

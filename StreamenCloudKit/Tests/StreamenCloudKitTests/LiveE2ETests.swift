@@ -4,7 +4,7 @@ import Testing
 
 /// End-to-end against a real server. Skipped unless `STREAMEN_CLOUD_E2E_URL` is set:
 ///
-///     STREAMEN_CLOUD_E2E_URL=https://cloud-staging.getlume.org swift test --filter LiveE2ETests
+///     STREAMEN_CLOUD_E2E_URL=https://cloud-staging.streamen.app swift test --filter LiveE2ETests
 ///
 /// Set `STREAMEN_CLOUD_E2E_INVITE` too for an instance running `SIGNUP=invite`.
 /// Every run creates a fresh account and deletes it at the end (also on failure).

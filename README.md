@@ -1,6 +1,6 @@
 # Streamen Cloud
 
-Free, **end-to-end encrypted** sync for the [Streamen](https://github.com/bilipp/Lume)
+Free, **end-to-end encrypted** sync for the [Streamen](https://github.com/dustintinsley/Streamen)
 IPTV player across Apple platforms and Android. Playlists, credentials, watch
 progress, favorites and profiles stay in step on every device. The official
 instance stores data in the EU, and anyone can run their own server: on
@@ -56,7 +56,7 @@ the sync algorithm, is [`spec/PROTOCOL.md`](spec/PROTOCOL.md).
 | Directory | What |
 |---|---|
 | [`spec/`](spec/) | The wire contract ([`PROTOCOL.md`](spec/PROTOCOL.md)) and cross-platform test vectors. Normative for every client. |
-| [`server/`](server/) | The server (TypeScript): Cloudflare Worker + Durable Objects, plus the Docker image. The official instance runs at `cloud.getlume.org`, staging at `cloud-staging.getlume.org`. Operator docs: [`server/README.md`](server/README.md). |
+| [`server/`](server/) | The server (TypeScript): Cloudflare Worker + Durable Objects, plus the Docker image. The official instance runs at `cloud.streamen.app`, staging at `cloud-staging.streamen.app`. Operator docs: [`server/README.md`](server/README.md). |
 | [`StreamenCloudKit/`](StreamenCloudKit/) | `StreamenCloudKit`, the zero-dependency Swift client (CryptoKit). The Streamen app consumes it as a local SPM package at `../StreamenCloud/StreamenCloudKit`. See [`StreamenCloudKit/README.md`](StreamenCloudKit/README.md). |
 
 The Android client (Kotlin) lives in `bilipp/LumeAndroid` and consumes `spec/`
@@ -81,7 +81,7 @@ Requirements: Docker with Compose v2. For HTTPS, a domain whose DNS points at
 the host and ports 80 and 443 reachable from the internet.
 
 ```bash
-git clone https://github.com/bilipp/LumeCloud.git
+git clone https://github.com/dustintinsley/StreamenCloud.git
 cd StreamenCloud/server
 cp .env.example .env
 ```
@@ -119,7 +119,7 @@ Requirements: Node 22 or newer, a Cloudflare account and a domain on
 Cloudflare.
 
 ```bash
-git clone https://github.com/bilipp/LumeCloud.git
+git clone https://github.com/dustintinsley/StreamenCloud.git
 cd StreamenCloud/server
 npm install
 npx wrangler login
@@ -171,12 +171,12 @@ The apps pick their server at build time; there is no setting for it in the
 app. To use your own server, build the app yourself with `STREAMEN_CLOUD_URL` set
 to its base URL, e.g. `https://cloud.example.com`:
 
-- **Apple** ([`bilipp/Lume`](https://github.com/bilipp/Lume)): put
+- **Apple** ([`dustintinsley/Streamen`](https://github.com/dustintinsley/Streamen)): put
   `STREAMEN_CLOUD_URL=…` in the app's `.env`. `Scripts/inject-env.sh` writes it
   into the Info.plist for every build configuration.
 - **Android** (`bilipp/LumeAndroid`): put `STREAMEN_CLOUD_URL=…` in
   `local.properties`. Only debug builds honor it; release builds always use
-  `https://cloud.getlume.org`.
+  `https://cloud.streamen.app`.
 
 Use HTTPS for anything that leaves your LAN. Apple platforms refuse plain-HTTP
 connections by default (App Transport Security).
@@ -191,7 +191,7 @@ anything. It works across Cloudflare and Docker servers alike.
 ```bash
 cd server
 STREAMEN_RECOVERY_KEY='XXXX-XXXX-…' node scripts/migrate-account.mjs \
-  --from https://cloud.getlume.org --to https://cloud.example.com --invite <code> --dry-run
+  --from https://cloud.streamen.app --to https://cloud.example.com --invite <code> --dry-run
 # then run again without --dry-run; add --delete-source to remove the old copy
 ```
 

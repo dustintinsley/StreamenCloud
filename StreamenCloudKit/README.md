@@ -159,7 +159,7 @@ sequence:
 
 ```bash
 # Staging
-STREAMEN_CLOUD_E2E_URL=https://cloud-staging.getlume.org swift test --filter LiveE2ETests
+STREAMEN_CLOUD_E2E_URL=https://cloud-staging.streamen.app swift test --filter LiveE2ETests
 
 # Local server (cd ../server && npx wrangler dev --port 8787)
 STREAMEN_CLOUD_E2E_URL=http://127.0.0.1:8787 swift test --filter LiveE2ETests

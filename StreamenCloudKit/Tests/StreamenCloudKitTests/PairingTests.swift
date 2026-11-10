@@ -8,7 +8,7 @@ struct PairingTests {
     static let grant = StreamenCloudGrant(
         accountId: "AAECAwQFBgcICQoLDA0ODw",
         rootKey: Data(0 ..< 32),
-        serverURL: URL(string: "https://cloud.getlume.org")!
+        serverURL: URL(string: "https://cloud.streamen.app")!
     )
 
     @Test func ciphersuiteIsX25519AESGCM256() {
@@ -65,7 +65,7 @@ struct PairingTests {
 
     @Test func grantEncodingIsCanonical() throws {
         let json = String(bytes: try Self.grant.encoded(), encoding: .utf8)
-        #expect(json == #"{"accountId":"AAECAwQFBgcICQoLDA0ODw","rootKey":"AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8","serverURL":"https://cloud.getlume.org"}"#)
+        #expect(json == #"{"accountId":"AAECAwQFBgcICQoLDA0ODw","rootKey":"AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8","serverURL":"https://cloud.streamen.app"}"#)
         #expect(try StreamenCloudGrant.decode(Self.grant.encoded()) == Self.grant)
     }
 

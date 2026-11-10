@@ -34,14 +34,14 @@
     "Recovery key: Crockford base32 of the 256 key bits (big-endian, 4 zero pad bits), plus the Crockford mod-37 check symbol, grouped by 4."
   ],
   "pairing" : {
-    "canonicalGrant" : "{\"accountId\":\"3Z_WPSEMqpMTD12R-NZkYw\",\"rootKey\":\"AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8\",\"serverURL\":\"https://cloud-staging.getlume.org\"}",
-    "ciphertext" : "bItlYCpS6a83SYCqz2tzOvefLDUbYRcBxMFRTDIuFSqkkAopUdoP26kC_M7-5JGG3DHG0-HVWLiuSxT7er0C3LNpeH0S7_fwV5NJCykamIGYtNzmUufXoa_Ft80PNIHNtXQDESx9SvqzDYaCcYB9tJx9FfsiUd3oJm9g4qcEofdJCdpHwN1qmJznsIuOqXaodb7qW-N088ZJbhhz5i4",
+    "canonicalGrant" : "{\"accountId\":\"3Z_WPSEMqpMTD12R-NZkYw\",\"rootKey\":\"AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8\",\"serverURL\":\"https://cloud-staging.streamen.app\"}",
+    "ciphertext" : "AzmR9jtUvqYx0c_8h5XMLRq1nES4svhh6Husn3hseiUuJ_I2jiYYwcZVlwhGCkpZzkPW1jSaaP81_TeXHZZaUhNCLb3kdZVO3TXz7sZ6EKlE9kzjinbsbDbGTTl8kw1qVVQKOw8WA7J9ixCkDwkQeQjnwTG1iTvla0g5J1UfJRJuggXbfs7IXw49cfhSEPN2cqBfEpcMc3ru7mUUCMpq",
     "code" : "483920",
-    "enc" : "RKOELUVamFgXYlo58goWh8i-WpEQU570FQoSEz4-924",
+    "enc" : "WmVEdwDKJAQoRhfpVAkmOCjaHdyOW3df1uoCkceZcFg",
     "grant" : {
       "accountId" : "3Z_WPSEMqpMTD12R-NZkYw",
       "rootKey" : "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
-      "serverURL" : "https://cloud-staging.getlume.org"
+      "serverURL" : "https://cloud-staging.streamen.app"
     },
     "info" : "streamen-cloud/v1/pairing",
     "recipientPrivateKey" : "ICEiIyQlJicoKSorLC0uLzAxMjM0NTY3ODk6Ozw9Pj8",

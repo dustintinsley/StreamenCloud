@@ -1,6 +1,6 @@
 # Streamen Cloud — server
 
-The sync backend for [Streamen](https://github.com/bilipp/Lume): an end-to-end
+The sync backend for [Streamen](https://github.com/dustintinsley/Streamen): an end-to-end
 encrypted, zero-knowledge store for user data (playlists, watch progress,
 favorites, profiles, …). It runs on **Cloudflare Workers + SQLite-backed
 Durable Objects**, written in TypeScript.
@@ -101,8 +101,8 @@ Environments live in `wrangler.jsonc`. The top level is local-only.
 
 | Env | Worker | Domain |
 |---|---|---|
-| `staging` | `streamen-cloud-staging` | `https://cloud-staging.getlume.org` |
-| `production` | `streamen-cloud` | `https://cloud.getlume.org` |
+| `staging` | `streamen-cloud-staging` | `https://cloud-staging.streamen.app` |
+| `production` | `streamen-cloud` | `https://cloud.streamen.app` |
 
 ```bash
 npx wrangler login                      # once, or export CLOUDFLARE_API_TOKEN
@@ -299,7 +299,7 @@ copied byte for byte without decrypting anything. No dependencies.
 
 ```bash
 STREAMEN_RECOVERY_KEY='XXXX-XXXX-…' node scripts/migrate-account.mjs \
-  --from https://cloud-staging.getlume.org --to https://cloud.getlume.org --dry-run
+  --from https://cloud-staging.streamen.app --to https://cloud.streamen.app --dry-run
 # then without --dry-run; add --delete-source to remove the source copy afterwards
 ```
 
